@@ -1,0 +1,17 @@
+node_modules/
+*.tgz
+*.zip
+*.log
+.env
+.env.*
+!.env.example
+coverage/
+dist/
+devices.json
+tls.json
+state.json
+authorized_keys
+ssh_host_*_key*
+DSH-Windows-Setup*.bat
+work/
+.ufi-auth

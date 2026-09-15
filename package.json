@@ -1,0 +1,19 @@
+{
+  "name": "dsh-windows-devices",
+  "version": "0.2.0",
+  "description": "DSH Windows 设备管理插件：一次接入、真实 SSH 管理、设备重命名、一键新建配置核验对话",
+  "engines": {"node": ">=22"},
+  "repository": {"type": "git", "url": "git+https://github.com/wx13489646836/dsh-windows-devices.git"},
+  "homepage": "https://github.com/wx13489646836/dsh-windows-devices#readme",
+  "bugs": {"url": "https://github.com/wx13489646836/dsh-windows-devices/issues"},
+  "keywords": ["dsh", "windows", "ssh", "powershell", "wifi", "device-management"],
+  "type": "module",
+  "main": "lib/index.js",
+  "exports": {".": "./lib/index.js", "./client": "./lib/client.js", "./package.json": "./package.json"},
+  "files": ["lib", "scripts", "cordis.patch.yml", "README.md"],
+  "dsh": {"bundle": {"patch": "./cordis.patch.yml"}, "client": {"inject": ["@deepseek-ai/dsh-client-ui-settings", "@deepseek-ai/dsh-client-ui-renderer", "@deepseek-ai/dsh-client-ui-session"], "platform": "web"}},
+  "dependencies": {"ssh2": "1.17.0", "selfsigned": "2.4.1"},
+  "bundledDependencies": ["ssh2", "selfsigned"],
+  "scripts": {"test": "node --test test/*.test.js"},
+  "license": "MIT"
+}

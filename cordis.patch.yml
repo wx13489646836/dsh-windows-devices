@@ -1,0 +1,3 @@
+- insert:
+    - id: windows-devices
+      name: dsh-windows-devices
