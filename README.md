@@ -1,4 +1,30 @@
-# DSH Windows Devices
+# DSH Windows Devices · Windows 设备管理插件
+
+为 DSH 增加 Windows 设备接入、状态核验和真实 SSH 管理能力。Windows 首次运行接入程序后，可在 DSH 的设备管理页修改显示名称、选择对话目标电脑，并通过已授权 SSH 执行 PowerShell 或文件操作。
+
+## 功能概览
+
+- 一次接入包、网络检查、设备在线状态和 SSH 身份核验。
+- 设备重命名、当前对话绑定与一键新建配置核验对话。
+- 远程 PowerShell 执行，以及受限制的文本读取、写入和目录查询。
+- 设备停用、恢复、解绑及 Windows 本地卸载接入入口。
+
+## 界面截图
+
+### GitHub 中的插件配置文件界面
+
+![GitHub 中的插件配置文件界面](docs/screenshots/configuration.jpg)
+
+当前 DSH 宿主地址无法连接，暂以真实配置文件界面说明插件结构；这不是设备已在线或 SSH 已验证的运行截图。宿主页位置为设置 → Windows 设备，运行截图仍需在宿主可用时补充。
+
+## 操作流程
+
+1. 准备符合下文网络约定的 DSH 宿主，并安装插件。
+2. Windows 电脑连接目标 WiFi，在 DSH 设备页下载接入程序。
+3. 按授权完成首次接入，等待在线及 SSH 已验证状态。
+4. 选择用于当前对话，或新建核验对话后使用 windows_* 工具。
+
+## 详细使用与开发说明
 
 让运行在移动 WiFi / Linux 主机上的 **DSH，通过真实 SSH 管理接入该 WiFi 的 Windows 电脑**。
 
